@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="co.idearun.twitter.feature.viewmodel.TwitterViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+
+
+            <include
+                android:id="@+id/userContentLay"
+                layout="@layout/layout_tweeter_content" />
+
+
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        <include
+            android:id="@+id/loading"
+            layout="@layout/layout_loading"
+            android:visibility="@{viewmodel.isLoading?View.VISIBLE:View.GONE,default=gone}" />
+
+        <include
+            android:id="@+id/share_pop_up"
+            layout="@layout/layout_share_ranl"
+            android:visibility="@{viewmodel.openShare?View.VISIBLE:View.GONE,default=gone}" />
+
+    </RelativeLayout>
+
+</layout>

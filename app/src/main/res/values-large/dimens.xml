@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //dimen * 1.5
+
+    <dimen name="padding_3xsmall">4.5dp</dimen>
+    <dimen name="padding_2xsmall">7.5dp</dimen>
+    <dimen name="padding_xsmall">11dp</dimen>
+    <dimen name="padding_small">15dp</dimen>
+    <dimen name="padding_standard">20dp</dimen>
+    <dimen name="padding_large">30dp</dimen>
+    <dimen name="padding_xlarge">33dp</dimen>
+    <dimen name="padding_2xlarge">39dp</dimen>
+    <dimen name="padding_3xlarge">45dp</dimen>
+
+
+    <dimen name="font_standard">21sp</dimen>
+    <dimen name="font_small">18sp</dimen>
+    <dimen name="font_large">24sp</dimen>
+    <dimen name="font_xlarge">27sp</dimen>
+    <dimen name="font_2xlarge">30sp</dimen>
+    <dimen name="font_3xlarge">36sp</dimen>
+
+    <dimen name="btn_radios_standard">15dp</dimen>
+    <dimen name="btn_radios_small">7.5dp</dimen>
+
+    <dimen name="divider_space_small">4.5dp</dimen>
+    <dimen name="divider_space_standard">7.5dp</dimen>
+    <dimen name="divider_space_large">12dp</dimen>
+    <dimen name="divider_space_xlarge">15dp</dimen>
+    <dimen name="divider_space_2xlarge">22.5dp</dimen>
+
+//
+    <dimen name="category_item_width">150dp</dimen>
+    <dimen name="category_img_size">225dp</dimen>
+
+    <dimen name="img_size_xs">108dp</dimen>
+    <dimen name="img_size_s">150dp</dimen>
+    <dimen name="img_size">225dp</dimen>
+    <dimen name="img_size_l">300dp</dimen>
+
+
+    <dimen name="edt_h">60dp</dimen>
+    <dimen name="edt_h_l">75dp</dimen>
+    <dimen name="edt_h_full">225dp</dimen>
+
+    <dimen name="btn_h_s">50dp</dimen>
+    <dimen name="btn_h">60dp</dimen>
+    <dimen name="btn_h_l">72dp</dimen>
+
+    <dimen name="spinning_bar_width">1.5dp</dimen>
+
+    <dimen name="header_size">225dp</dimen>
+    <dimen name="slider_size">300dp</dimen>
+
+    <dimen name="navigation_view_width">375dp</dimen>
+
+
+    <dimen name="filter_group_width">225dp</dimen>
+
+    <dimen name="icon_size_standard">36dp</dimen>
+    <dimen name="icon_size_large">48dp</dimen>
+    <dimen name="icon_size_small">27dp</dimen>
+
+    <dimen name="product_img_h">525dp</dimen>
+
+    <dimen name="amount_card">96dp</dimen>
+
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+
+        <variable
+            name="holder"
+            type="co.idearun.twitter.feature.adapter.FollowingsAdapter.BtnsViewHolder" />
+
+        <variable
+            name="vm"
+            type="co.idearun.twitter.feature.viewmodel.TwitterViewModel" />
+
+        <variable
+            name="listener"
+            type="co.idearun.twitter.feature.UserListener" />
+
+        <variable
+            name="item"
+            type="co.idearun.twitter.data.model.User" />
+    </data>
+
+
+
+    <RelativeLayout
+        android:padding="@dimen/padding_small"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/container_radius"
+        android:onClick="@{()->listener.openUserTwitter(item)}"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="@dimen/img_size_xs"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_height="@dimen/img_size_xs"
+            android:layout_marginEnd="@dimen/padding_small"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            app:imageUrlRounded="@{item.profile_image_url_https}"
+            app:layout_anchorGravity="bottom|start"
+            app:layout_collapseMode="parallax" />
+
+        <LinearLayout
+            android:layout_toStartOf="@+id/rank_txv"
+            android:layout_toEndOf="@+id/profile_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_small"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:text="@{item.name}"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_small"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorBlack"
+                android:textAppearance="?attr/textAppearanceBody1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_small"
+                android:gravity="center"
+                android:text="@{'@'+item.screen_name}"
+                android:textColor="@color/colorDarkGray"
+                android:textAppearance="?attr/textAppearanceBody2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:text="@{item.description}"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:textAppearance="?attr/textAppearanceBody2" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/rank_txv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/blue"
+            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+    </RelativeLayout>
+
+
+
+</layout>

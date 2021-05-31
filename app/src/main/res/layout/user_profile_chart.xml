@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="co.idearun.twitter.feature.viewmodel.TwitterViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/container_radius">
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:padding="@dimen/padding_large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <com.github.anastr.speedviewlib.SpeedView
+                android:id="@+id/speedView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sv_unit=" Audit"
+                app:sv_unitUnderSpeedText="false" />
+
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+</layout>

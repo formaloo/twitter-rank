@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="co.idearun.twitter.feature.UserListener" />
+
+
+        <variable
+            name="viewmodel"
+            type="co.idearun.twitter.feature.viewmodel.TwitterViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/colorShadow"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:onClick="@{()->viewmodel.hidePopUp()}"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/padding_xlarge"
+            android:paddingBottom="@dimen/padding_xlarge"
+            android:paddingStart="@dimen/padding_3xlarge"
+            android:paddingEnd="@dimen/padding_3xlarge"
+            >
+
+            <ImageView
+                android:id="@+id/Sign_in_imv"
+                android:layout_width="@dimen/img_size_s"
+                android:layout_height="@dimen/img_size_s"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/twitter_rank" />
+
+            <TextView
+                android:id="@+id/Sign_in_txv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/padding_xlarge"
+                android:text="@{viewmodel.tweeterScore !=null ? @string/your_rank_is+viewmodel.tweeterScore+'/'+ @string/ten :@string/your_rank_is+@string/empty_score}"
+                android:textColor="@color/colorBlack"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/share_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_xlarge"
+                android:background="@drawable/back_button_fill"
+                android:gravity="center"
+                android:onClick="@{()->listener.shareRank(viewmodel.profile)}"
+                android:padding="@dimen/padding_standard"
+                android:text="@string/share_your_rank"
+                android:textColor="@color/white"
+                android:textAppearance="?attr/textAppearanceBody1" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

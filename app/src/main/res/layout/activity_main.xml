@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    <variable
+        name="viewmodel"
+        type="co.idearun.twitter.feature.viewmodel.TwitterViewModel" />
+    <import type="android.view.View"/>
+
+        <variable
+            name="listener"
+            type="co.idearun.twitter.feature.MainListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_small"
+        tools:context=".MainActivity">
+
+        <include
+            android:id="@+id/main_content_lay"
+            layout="@layout/layout_main_content" />
+
+        <include android:id="@+id/loading"
+            android:visibility="@{viewmodel.isLoading?View.VISIBLE:View.GONE,default=gone}"
+            layout="@layout/layout_loading"/>
+
+
+        <TextView
+            android:id="@+id/powered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:onClick="@{()->listener.openFormaloo()}"
+            android:text="@string/powered_by"
+            android:textAllCaps="false"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/padding_3xsmall"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

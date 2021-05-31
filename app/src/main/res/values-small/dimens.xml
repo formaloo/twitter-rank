@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //dimen/1.5
+    <dimen name="padding_3xsmall">2dp</dimen>
+    <dimen name="padding_2xsmall">3dp</dimen>
+    <dimen name="padding_xsmall">5dp</dimen>
+    <dimen name="padding_small">7.5dp</dimen>
+    <dimen name="padding_standard">12dp</dimen>
+    <dimen name="padding_large">15dp</dimen>
+    <dimen name="padding_xlarge">16.5dp</dimen>
+    <dimen name="padding_2xlarge">19.5dp</dimen>
+    <dimen name="padding_3xlarge">22.5dp</dimen>
+
+    <dimen name="font_standard">10.5sp</dimen>
+    <dimen name="font_small">9sp</dimen>
+    <dimen name="font_large">12sp</dimen>
+    <dimen name="font_xlarge">13.5sp</dimen>
+    <dimen name="font_2xlarge">15sp</dimen>
+    <dimen name="font_3xlarge">18sp</dimen>
+
+    <dimen name="btn_radios_standard">7.5dp</dimen>
+    <dimen name="btn_radios_small">3.75dp</dimen>
+
+    <dimen name="divider_space_small">2.25dp</dimen>
+    <dimen name="divider_space_standard">3.75dp</dimen>
+    <dimen name="divider_space_large">6dp</dimen>
+    <dimen name="divider_space_xlarge">7.5dp</dimen>
+    <dimen name="divider_space_2xlarge">11.25dp</dimen>
+//
+    <dimen name="category_item_width">67dp</dimen>
+    <dimen name="category_img_size">100dp</dimen>
+
+    <dimen name="img_size_xs">48dp</dimen>
+    <dimen name="img_size_s">67dp</dimen>
+    <dimen name="img_size">100dp</dimen>
+    <dimen name="img_size_l">134dp</dimen>
+
+
+    <dimen name="edt_h">27dp</dimen>
+    <dimen name="edt_h_l">33dp</dimen>
+    <dimen name="edt_h_full">100dp</dimen>
+
+    <dimen name="btn_h_s">21dp</dimen>
+    <dimen name="btn_h">27dp</dimen>
+    <dimen name="btn_h_l">33dp</dimen>
+
+    <dimen name="spinning_bar_width">0.75dp</dimen>
+
+    <dimen name="header_size">100dp</dimen>
+    <dimen name="slider_size">134dp</dimen>
+
+    <dimen name="navigation_view_width">267dp</dimen>
+
+
+    <dimen name="filter_group_width">100dp</dimen>
+
+    <dimen name="products_grid_width">110dp</dimen>
+
+    <dimen name="icon_size_standard">16dp</dimen>
+    <dimen name="icon_size_large">24dp</dimen>
+    <dimen name="icon_size_small">12dp</dimen>
+
+    <dimen name="product_img_h">233dp</dimen>
+
+    <dimen name="amount_card">48dp</dimen>
+
+</resources>

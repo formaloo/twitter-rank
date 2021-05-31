@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <data>
+
+        <variable
+            name="listener"
+            type="co.idearun.twitter.feature.UserListener" />
+
+        <variable
+            name="viewmodel"
+            type="co.idearun.twitter.feature.viewmodel.TwitterViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/container_radius">
+
+        <LinearLayout
+            android:padding="@dimen/padding_large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/img_size_s"
+                android:layout_height="@dimen/img_size_s"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                android:visibility="visible"
+                app:imageUrlRounded="@{viewmodel.profile.profile_image_url_https}" />
+
+            <LinearLayout
+                android:paddingStart="@dimen/padding_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:id="@+id/displayname"
+                    android:textSize="16sp"
+                    android:maxLines="1"
+                    android:textColor="@color/gray1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewmodel.profile.name}" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{`@`+viewmodel.profile.screen_name}" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray2"
+                    android:maxLines="3"
+                    android:textSize="12dp"
+                    android:layout_marginTop="@dimen/padding_xsmall"
+                    android:text="@{viewmodel.profile.description}" />
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/following"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray1"
+                        android:text="@{`Following: `+viewmodel.profile.friends_count.toString()}" />
+
+                    <TextView
+                        android:id="@+id/followers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray1"
+                        android:text="@{viewmodel.profile.followers_count > 1000 ? `Followers: `+(viewmodel.profile.followers_count/1000) + 'k' : `Followers: `+ viewmodel.profile.followers_count.toString()}"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</layout>

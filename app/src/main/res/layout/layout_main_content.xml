@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="co.idearun.twitter.feature.viewmodel.TwitterViewModel" />
+
+        <variable
+            name="listener"
+            type="co.idearun.twitter.feature.MainListener" />
+    </data>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/container_radius">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_large">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/Sign_in_imv"
+                    android:layout_width="@dimen/img_size_s"
+                    android:layout_height="@dimen/img_size_s"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/padding_small"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/twitter_rank" />
+
+                <TextView
+                    android:id="@+id/Sign_in_txv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:text="@string/app_name"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/Sign_in_name_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_small"
+                    android:hint="@string/user_name"
+                    app:errorText="@{viewmodel.userErr}"
+                    app:layout_constraintBottom_toTopOf="@+id/profile_email_layout"
+                    app:layout_constraintTop_toBottomOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/Sign_in_name_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorGlass"
+                        android:drawablePadding="@dimen/padding_2xsmall"
+                        android:focusableInTouchMode="true"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:text="@={viewmodel.sInUsernameEdtContent}"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="@color/colorBlack" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@{viewmodel.activeBtn.booleanValue() ? @drawable/back_button_fill : @drawable/back_gray_fill, default=@drawable/back_gray_fill}"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:onClick="@{()->viewmodel.usernameInserted()}"
+                    android:paddingStart="@dimen/padding_standard"
+                    android:paddingEnd="@dimen/padding_standard"
+                    android:text="@string/calculate_my_rank"
+                    android:textAllCaps="false"
+                    android:textColor="@{viewmodel.activeBtn.booleanValue()  ? @color/white :@color/colorDarkGray, default=@color/colorDarkGray}" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:onClick="@{()->listener.openInfo()}"
+                    android:padding="@dimen/padding_small"
+                    android:text="@string/how_this_work"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorDarkGray" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/padding_standard">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="@dimen/icon_size_large"
+        android:layout_height="@dimen/icon_size_large"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/padding_standard"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:paddingEnd="@dimen/padding_standard"
+        android:paddingBottom="@dimen/padding_standard"
+        android:src="@drawable/ic_arrow" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/padding_standard"
+        android:text="@string/how_this_work"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_large" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/back_btn"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/powered"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/padding_standard"
+                android:autoLink="web"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="@dimen/padding_3xsmall"
+                android:text="@string/info"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_large" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/send_feedback_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/powered"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/back_button_fill"
+                android:text="Send Feedback"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

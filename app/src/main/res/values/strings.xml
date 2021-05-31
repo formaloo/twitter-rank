@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Twitter Rank</string>
+    <string name="tweets"> Tweets</string>
+    <string name="followers"> Followers</string>
+    <string name="following"> Following</string>
+    <string name="user_name">Username</string>
+    <string name="calculate_my_rank">Calculate my rank</string>
+    <string name="how_this_work">How it works</string>
+    <string name="powered_by">Powered by Formaloo CDP</string>
+    <string name="formaloo_web">https://formaloo.net/</string>
+    <string name="loading">Calculating...</string>
+    <string name="joined">Joined </string>
+    <string name="share_your_rank">Share your Rank</string>
+    <string name="your_rank_is">Your Rank is :   </string>
+    <string name="ten">10</string>
+    <string name="five">5</string>
+    <string name="empty_score"># / 10</string>
+    <string name="ok">OK</string>
+    <string name="no_internet">Check Internet Connection</string>
+    <string name="auth_err">UnAuthorized</string>
+    <string name="server_err">Server Error</string>
+    <string name="info">
+    <string name="following_count">Following: %s</string>
+    <string name="followes_count">Followers: %s</string>
+    <string name="worst_following">your worst following rank</string>
+
+        <b>TwitterRank</b>
+        \n
+        This app aims to analyze every Twitter account and rank them based on their activities, interactions between users, and the content that they’re sharing. Ultimately this app tries to identify the “real” accounts from fake accounts, bots, and suspicious accounts.
+       \n\n
+        <b>Why we started this project?</b>
+        \n
+        Today the biggest problem of Twitter is fake news and fake accounts. There are millions of bot/bogus accounts on Twitter that are tweeting and retweeting false news and irrelevant data. This situation is causing real news and real information to be buried under the avalanche of fake information. This algorithm helps Twitter and Twitter users to identify which accounts are real and which accounts are bogus (or acts suspiciously). With this app and this algorithm, we help you see the value behind every Twitter account you’re following and decide to get your information with insight.
+       \n\n
+        <b>How does it work?</b>
+       \n
+       TwitterRank works by counting the number and quality of interactions to a Twitter account to determine a rough estimate of how important the account is. The underlying assumption is that more important accounts are likely to receive more “real” interactions from other Twitter accounts.
+   \n
+        TwitterRank app uses Twitter API and Formaloo CDP data mining engine to analyse every interaction of every Twitter account and rank them based on their activities. These ranks are calculated between 0 and 10 with 0 being the lowest score possible (mostly associated with fake accounts, bots or inactive accounts) and 10 in the highest score possible. All ranks will be updated monthly.
+
+    </string>
+</resources>
